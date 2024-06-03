@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./jsp/app-details.css">
+    <script src="https://kit.fontawesome.com/9dc55b3f56.js" ></script>
+    <title>Applicant Details</title>
+    <style>
+    
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+ nav {
+     
+      background: #3498db;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #2ecc71;
+    }
+    
+h1{
+    text-align: center;
+}
+#container{
+    width: 75%;
+    border-radius: 8px;
+    padding: 30px;
+    margin-inline: auto;
+    
+   
+    background: linear-gradient(45deg,rgb(116, 116, 221), rgb(167, 198, 238));
+    box-shadow: 0px 0px 20px gray;
+    margin-top: 34px;
+}
+.form{
+    display: flex;
+}
+
+form input{
+    padding: 8px 16px;
+    background-color: rgb(225, 230, 235);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+select{
+    padding: 8px 16px;
+    background-color: rgb(216, 222, 228);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+select>option{
+    margin-top: 8px;
+    cursor: pointer;    
+
+}
+textarea{
+    padding: 8px 16px;
+    background-color: rgb(219, 225, 230);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+}
+label{
+    margin-top: 10px;
+    font-weight: 600;
+}
+.form>.col{
+    margin-inline:auto;
+    display: flex;
+    gap: 20px;
+   
+}
+
+.form #subcol1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form #subcol2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form>button{
+    display: block;
+    margin-top:30px;
+ margin-inline: auto;
+ background-color: rgb(132, 236, 205);
+ outline: none;
+ border: none;
+ padding: 8px 16px;
+ border-radius: 5px;
+ cursor: pointer;
+transition: all 0.5s;
+ font-size: 16px;
+ font-weight: 600;
+}
+form>button:hover{
+    box-shadow: 0px 0px 10px rgb(14, 13, 13,0.5);
+}
+form>button:active{
+   transform: scale(1.05);
+}
+form .span{
+    display: block;
+    padding: 5px 16px;
+   font-size: 16px;
+   
+    
+}</style>
+</head>
+<body>
+<nav th:include="index :: nav"></nav>
+    <h1 th:if="${plant.plantId==null}"><i class="fa-solid fa-user-plus"></i>&nbsp; Add Plant Details  </h1>
+    <h1 th:if="${plant.plantId!=null}"><i class="fa-solid fa-user-plus"></i>&nbsp; Update Plant Details  </h1>
+    <div id="container">
+        <form action="/zetta/plant/add" method="post" th:object="${plant}">
+            <div class="form">
+
+           
+            <div class="col">
+                <div id="subcol1">
+                    <label for="name">Plant Id <span style="color: red;">*</span></label>
+                    <label for="name">Name <span style="color: red;">*</span></label>
+                    <label for="name">State<span style="color: red;">*</span></label>
+                    <label for="name">City<span style="color: red;">*</span></label>
+                    <label for="name">Active Status<span style="color: red;">*</span></label>
+                     
+                </div>
+                <div th:if="${plant.plantId==null}" id="subcol2">
+                    <input type="text" name="plantId" required placeholder="plant id" th:feild="*{plantId}">
+                    <input type="text" name="plantName" required placeholder="name" th:feild="*{plantName}">
+                    
+                    <select name="plantState" th:feild="*{plantState}">
+                   <option selected disabled>Select State</option>
+                     <option th:each=" state: ${T(com.zettamine.spring.mi.entities.States).values()}" th:value="${state.getStateName()}" th:text="${state}"></option>
+                   </select> 
+                    <input type="text" name="plantCity" required placeholder="city" th:feild="*{plantCity}">
+                   <select name="plantActiveStatus" th:feild="${plantActiveStatus}">
+                     <option selected disabled>Select Option</option>
+                     <option value="YES">YES</option>
+                     <option value="NO">NO</option>
+                   </select>
+
+                </div>
+                
+                <div th:if="${plant.plantId!=null}" id="subcol2">
+                   <input type="text" name="plantId" th:feild="*{plantId}" th:value="${plant.plantId}">
+                    <input type="text" name="plantName" th:value="${plant.plantName}" required placeholder="name" th:feild="*{plantName}">
+                    
+                    <select name="plantState" th:feild="*{plantState}" th:value="${plant.plantState}">
+                <!--   <option selected disabled>Select State</option>  --> 
+                 <option th:if="${plant.plantId!=null}" selected th:feild="*{plantState}" th:value="${plant.plantState}" th:text="${plant.plantState}"></option>
+                     <option th:each=" state: ${T(com.zettamine.spring.mi.entities.States).values()}" th:value="${state.getStateName()}" th:text="${state}"></option>
+                   </select> 
+                    <input type="text" name="plantCity" th:value="${plant.plantCity}" required placeholder="city" th:feild="*{plantCity}">
+                   <select name="plantActiveStatus" th:value="${plant.plantActiveStatus}" th:feild="${plantActiveStatus}">
+                   <!--   <option selected disabled>Select Option</option>  --> 
+                    <option th:if="${plant.plantId!=null}" selected th:feild="*{plantActiveStatus}" th:value="${plant.plantActiveStatus}" th:text="${plant.plantActiveStatus}"></option>
+                     <option value="YES">YES</option>
+                     <option value="NO">NO</option>
+                   </select>
+
+                </div>
+            </div>
+            
+               
+
+            </div>
+        
+            <button th:if="${plant.plantId==null}" type="submit"> Submit</button>
+            <button th:if="${plant.plantId!=null}" type="submit"> Update</button>
+        </form>
+    </div>
+</body>
+</html>

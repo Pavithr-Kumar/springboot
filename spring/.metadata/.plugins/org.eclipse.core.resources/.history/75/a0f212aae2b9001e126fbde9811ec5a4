@@ -1,0 +1,11 @@
+package com.zettamine.spring.dao;
+
+public class DataProvider1 implements DataProvider {
+
+	@Override
+	public int[] getData() {
+		
+		return new int[] {11,22,23,41,5,26,7};
+	}
+
+}

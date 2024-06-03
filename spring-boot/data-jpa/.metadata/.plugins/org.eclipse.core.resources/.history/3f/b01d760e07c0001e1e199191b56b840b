@@ -1,0 +1,18 @@
+package com.zettamine.data;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.zettamine.data.service.ContactService;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+   ConfigurableApplicationContext context =		SpringApplication.run(Application.class, args);
+   ContactService service = context.getBean(ContactService.class);
+   service.printAllPages();
+	}
+
+}

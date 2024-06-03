@@ -1,0 +1,16 @@
+server:
+  port: 8901
+spring:
+  application:
+    name: "configserver"
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Pavithr-Kumar/zetta-config.git
+          clone-on-start: true
+          default-label: main
+          force-pull: true
+          timeout: 5         
+  profiles:
+    active: git

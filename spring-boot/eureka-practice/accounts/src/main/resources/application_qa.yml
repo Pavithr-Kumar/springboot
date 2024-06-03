@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to ZettaBank accounts related QA APIs "
+  contactDetails:
+    name: "Sanjay - QA Lead"
+    email: "sanjay@zettabank.com"
+  onCallSupport:
+    - (040) 265-3765
+    - (040) 734-8371

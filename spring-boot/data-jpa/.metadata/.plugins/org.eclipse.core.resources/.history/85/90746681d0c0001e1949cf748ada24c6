@@ -1,0 +1,14 @@
+package com.zettamine.data.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class WelcomeController {
+	public ModelAndView show() {
+		ModelAndView m = new ModelAndView();
+		m.setViewName("index");
+		return m;
+	}
+
+}

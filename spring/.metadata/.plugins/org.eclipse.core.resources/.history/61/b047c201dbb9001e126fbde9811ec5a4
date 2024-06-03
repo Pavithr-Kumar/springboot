@@ -1,0 +1,10 @@
+package com.zettamine.spring.core.beans;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Employee {
+	private String empName;
+	private Address address;
+
+}

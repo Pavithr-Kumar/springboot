@@ -1,0 +1,5 @@
+package com.zettamine.boot.configs;
+
+public class EmployeeConfigs {
+
+}

@@ -1,0 +1,5 @@
+package com.zettamine.security.config;
+
+public class SecurityConfig {
+
+}

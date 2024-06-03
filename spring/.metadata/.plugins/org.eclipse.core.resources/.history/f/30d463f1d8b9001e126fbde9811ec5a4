@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car1" class="com.zettamine.spring.core.beans.Car">
+		<property name="modelName" value="Fortuner"></property>
+		<property name="cost" value="505000"></property>
+		
+	</bean>
+	
+	<bean id="car2" class="com.zettamine.spring.core.beans.Car">
+		<property name="modelName" value="Audi A8"></property>
+		<property name="cost" value="675000"></property>
+		
+	</bean>
+	
+	<bean id="cust1" class="com.zettamine.spring.core.beans.Customer" >
+			<property name="custName" value="Sanjay"></property>
+		<property name="car" ref="car1"></property>
+		
+  <!--	<constructor-arg value="Pavithr"></constructor-arg>
+		<constructor-arg value="Kumar"></constructor-arg>  -->
+	</bean>
+	
+	<bean id="cust2" class="com.zettamine.spring.core.beans.Customer" >
+			<constructor-arg value="Pavithr Kumar"></constructor-arg>
+		<constructor-arg ref="car1"></constructor-arg>
+		
+  <!--	<constructor-arg value="Pavithr"></constructor-arg>
+		<constructor-arg value="Kumar"></constructor-arg>  -->
+	</bean>
+
+
+	   <!-- <bean id="user3" parent="user1">
+ 	<property name="firstName" value="Pavithr"></property>
+	<property name="lastName" value="Kumar"></property>
+	 	<constructor-arg value="Pavithr"></constructor-arg>
+		<constructor-arg value="Kumar"></constructor-arg>  
+	</bean>  -->
+</beans>

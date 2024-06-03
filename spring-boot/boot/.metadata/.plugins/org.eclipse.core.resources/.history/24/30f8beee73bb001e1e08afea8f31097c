@@ -1,0 +1,14 @@
+package com.zettamine.boot.service;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import com.zettamine.boot.configs.EmployeeConfigs;
+
+@Service
+public class EmployeeService {
+	public EmployeeService() {
+		LoggerFactory.getLogger(EmployeeConfigs.class).info("\033[32mEmployee Service Bean\033[0m");
+	}
+
+}

@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "accounts"
+  datasource:
+#    driver-class-name: org.h2.Driver
+    password: root
+    url: "jdbc:mysql://localhost:3306/accountsdb"
+    username: admin
+#  h2:
+#    console:
+#      enabled: true
+  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/    
+
+      

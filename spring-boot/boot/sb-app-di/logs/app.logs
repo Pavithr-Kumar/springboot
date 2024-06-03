@@ -1,0 +1,8 @@
+2024-01-29T12:05:34.016+05:30  INFO 20604 --- [main] com.zettamine.boot.SbAppDiApplication    : Starting SbAppDiApplication using Java 17.0.9 with PID 20604 (D:\java-workspace\spring-boot\boot\sb-app-di\target\classes started by Pavithra Kumar in D:\java-workspace\spring-boot\boot\sb-app-di)
+2024-01-29T12:05:34.020+05:30  INFO 20604 --- [main] com.zettamine.boot.SbAppDiApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-01-29T12:05:34.631+05:30  INFO 20604 --- [main] com.zettamine.boot.beans.DieselEngine    : [32mDiesel Engine :: Bean Created
+2024-01-29T12:05:34.632+05:30  INFO 20604 --- [main] com.zettamine.boot.beans.Wheel           : ### Wheel Bean
+2024-01-29T12:05:34.634+05:30  INFO 20604 --- [main] com.zettamine.boot.beans.PetrolEngine    : [32mCar :: Bean Created[0m
+2024-01-29T12:05:34.642+05:30  INFO 20604 --- [main] com.zettamine.boot.beans.PetrolEngine    : [32mPetrol Engine :: Bean Created[0m
+2024-01-29T12:05:34.794+05:30  INFO 20604 --- [main] com.zettamine.boot.SbAppDiApplication    : Started SbAppDiApplication in 1.37 seconds (process running for 2.247)
+2024-01-29T12:05:34.799+05:30  INFO 20604 --- [main] com.zettamine.boot.beans.DieselEngine    : [32mDiesel Engine :: Started

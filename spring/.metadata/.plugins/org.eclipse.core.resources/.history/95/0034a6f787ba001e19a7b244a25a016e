@@ -1,0 +1,25 @@
+package com.zettamine.spring.ems.dao;
+
+import com.zettamine.spring.ems.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	@Override
+	public Integer insertEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer deleteEMployee(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

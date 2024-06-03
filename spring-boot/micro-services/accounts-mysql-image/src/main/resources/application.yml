@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "accounts"
+
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/accountsdb
+    username: root
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  profiles:
+    active:
+    - prod
+  config:
+    import: "optional:configserver:http://localhost:8070"
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"

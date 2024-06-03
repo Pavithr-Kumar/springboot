@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\java-workspace\spring-boot\eureka-practice\loans"/>
+			<item value="D:\java-workspace\spring-boot\eureka-practice\cards"/>
+			<item value="D:\java-workspace\spring-boot\eureka-practice\accounts"/>
+			<item value="D:\java-workspace\spring-boot\eureka-practice\01-bank-acounts"/>
+			<item value="D:\java-workspace\spring-boot\micro-services\configserver"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

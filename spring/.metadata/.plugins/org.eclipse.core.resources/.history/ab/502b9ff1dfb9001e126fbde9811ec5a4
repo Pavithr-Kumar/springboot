@@ -1,0 +1,34 @@
+package com.zettamine.spring.core.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Employee {
+	
+	private String empName;
+//	@Autowired
+	private Address address;
+	
+	
+//	@Autowired
+//	public Employee( Address address) {
+//		super();
+//		this.address = address;
+//	}
+
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", address=" + address + "]";
+	}
+
+   
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+
+}

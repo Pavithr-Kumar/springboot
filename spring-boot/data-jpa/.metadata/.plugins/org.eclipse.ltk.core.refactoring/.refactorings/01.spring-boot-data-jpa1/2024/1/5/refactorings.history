@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.zettamine.data.entities&apos; to &apos;01.spring-boot-data-jpa2/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;01.spring-boot-data-jpa1&apos;&#x0D;&#x0A;- Destination element: &apos;01.spring-boot-data-jpa2/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;01.spring-boot-data-jpa1/src/main/java/com.zettamine.data.entities&apos;" description="Copy package" destination="=01.spring-boot-data-jpa2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.zettamine.data.entities" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1706592347268" version="1.0"/>
+</session>

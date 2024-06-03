@@ -1,0 +1,27 @@
+package com.zettamine.data;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.zettamine.data.entities.Product;
+import com.zettamine.data.repository.ProductRepo;
+
+@SpringBootApplication
+public class Application {
+	
+	private static ProductRepo repo;
+
+	public static void setRepo(ProductRepo repo) {
+		Application.repo = repo;
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+		repo.saveAll(Arrays.asList(new Product("Computer",70000f),new Product("Mobile",13000f),new Product("Television",15000f)));
+		
+	}
+
+}

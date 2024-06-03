@@ -1,0 +1,5 @@
+package com.zettamine.data.repository;
+
+public interface CustomerRepo {
+
+}

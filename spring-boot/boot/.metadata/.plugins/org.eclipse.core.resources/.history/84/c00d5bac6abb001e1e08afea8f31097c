@@ -1,0 +1,5 @@
+package com.zettamine.boot.service;
+
+public class EmployeeService {
+
+}

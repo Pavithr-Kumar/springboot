@@ -1,0 +1,10 @@
+datasource: ''
+ddl-auto: update
+driver-class-name: org.postgresql.Driver
+hibernate: ''
+jpa: ''
+password: Root@123
+show-sql: true
+spring: ''
+url: jdbc:postgresql://localhost:5432/sample_db
+username: postgres

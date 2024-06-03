@@ -1,0 +1,35 @@
+package com.zettamine.data.entities;
+
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+public class Student {
+	@Id
+	@GeneratedValue
+	private Integer Id;
+	private String name;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+    
+	private List<Course> course;
+
+//	public Student(String name, Course course) {
+//		super();
+//		this.name = name;
+//		this.course = course;
+//	}
+	
+	
+
+}

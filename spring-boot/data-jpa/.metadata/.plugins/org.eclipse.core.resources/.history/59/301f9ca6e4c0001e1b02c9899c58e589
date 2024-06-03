@@ -1,0 +1,22 @@
+package com.zettamine.data.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class WelcomeController {
+	@GetMapping("/welcome")
+	public String showWelcome(Model m) {
+		
+		m.addAttribute("message","Welcome to Zettamine");
+		return "index";
+	}
+	
+	@GetMapping("/new")
+	public String returnAnObject(Model m) {
+		m.addAttribute("obj","Name:Pavithr Kumar\n Age:23");
+		return "new";
+	}
+
+}

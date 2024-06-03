@@ -1,0 +1,38 @@
+services:
+  accounts-db:
+   image: mysql
+   container_name: mysqlc
+   ports: 
+     - 3306:3306
+   environment:
+    MYSQL_DATABASE: accountsdb
+    MYSQL_ROOT_PASSWORD: root
+   healthcheck:
+    test: ["CMD", "mysqladmin","ping","-h","localhost"]
+    timeout: 10s
+    retries: 10
+    interval: 10s
+    start_period: 10s
+   networks:
+    - zettabank
+
+  accounts:
+   image: "accounts:v3"
+   container_name: accounts-ms
+   ports:
+    - "8080:8080"
+   environment:
+    SPRING_APPLICATION_NAME: "accounts"
+    SPRING_DATASOURCE_URL: "jdbc:mysql://accounts-db:3306/accountsdb"
+   depends_on:
+    accounts-db:
+      condition: service_healthy
+   networks:
+    - zettabank 
+  config-server:
+   image: "configserver:v3"
+   
+       
+networks:
+  zettabank:
+    driver: "bridge"

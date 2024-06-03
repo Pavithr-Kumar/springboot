@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="user1" class="com.zettamine.spring.core.beans.User" lazy-init="true" init-method="myInit" destroy-method="myDestroy">
+		<property name="firstName" value="Sanjay"></property>
+		<property name="lastName" value="Patil"></property>
+	</bean>
+
+
+
+	<bean id="user2" class="com.zettamine.spring.core.beans.User">
+		<property name="firstName" value="Jagadesh"></property>
+		<property name="lastName" value="Sekar"></property>
+	</bean>
+
+	<bean id="user3" class="com.zettamine.spring.core.beans.User">
+		<constructor-arg value="Pavithr"></constructor-arg>
+		<constructor-arg value="Kumar"></constructor-arg>
+	</bean>
+</beans>

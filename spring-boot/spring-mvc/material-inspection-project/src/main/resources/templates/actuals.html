@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actuals Page</title>
+   <script src="https://kit.fontawesome.com/9dc55b3f56.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+     nav {
+     
+      background: #3498db;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #2ecc71;
+    }
+    
+
+    header {
+  
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+     color:blue;
+      margin: 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap:30px;
+      margin: 20px 140px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #d1dde3, #d4dbe4);
+      color:black;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+     
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+       background: linear-gradient(45deg, #d1dde3, #d4dbe4);
+     
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    td>a{
+    margin-left:20px;
+    color:blue;
+    cursor:pointer;
+    transition:all 0.6s;
+    font-size:22px;
+    }
+     td>a>i:hover{
+     transform:scale(1.1);
+     }
+  </style>
+</head>
+<body>
+ <nav th:include="index :: nav"></nav>
+  <header>
+    <h1>Actuals Measurements</h1>
+  </header>
+
+  <div class="buttons">
+    <a href="/zetta/isp-lot/show-all" class="button">Inspection Lots</a>
+   <!--  <a href="/zetta/isp-lot/actuals/show-all" class="button">Show All</a> -->
+
+  </div>
+
+  <table class="fade-in">
+    <thead>
+      <tr>
+        
+      <!--   <th>Actual Measurement Id</th> --> 
+        <th>Lot Id</th>
+        <th>Material Id</th>
+        <th>Material</th>
+        <th>Characteristic</th>
+       <th>Tolerance Lower Limit</th>
+       <th>Tolerance Upper Limit</th>
+       <th>UOM</th>
+        <th>Min Measurement</th>
+        <th>Max Measurement</th>
+      
+      </tr>
+    </thead>
+    <tbody th:each=" actual :${actuals.keySet()}">
+      <tr>
+        
+    <!--    <td th:text=" ${actual.actualsId}"></td>  --> 
+        <td th:text=" ${actuals.get(actual).ispLot.inspectionLotId}"></td>
+        <td th:text=" ${actuals.get(actual).ispLot.material.materialId}"></td>
+        <td th:text=" ${actuals.get(actual).ispLot.material.materialDescription}"></td>
+        <td th:text=" ${actual}"></td>
+        <td th:text= "${actuals.get(actual).lowerTol}"></td>
+        <td th:text= "${actuals.get(actual).upperTol}"></td>
+        <td th:text= "${actuals.get(actual).charUom}"></td>
+        
+        <td th:if="${actuals.get(actual).actualMin >= actuals.get(actual).lowerTol}" th:text= "${actuals.get(actual).actualMin}" style="font-weight:700;"></td>
+        <td th:if="${actuals.get(actual).actualMin < actuals.get(actual).lowerTol}" th:text= "${actuals.get(actual).actualMin}" style="color:red;font-weight:700;"></td>
+        <td th:if="${actuals.get(actual).actualMax <=  actuals.get(actual).upperTol }" th:text= "${actuals.get(actual).actualMax}" style="font-weight:700;"></td>
+        
+        <td th:if="${actuals.get(actual).actualMax >  actuals.get(actual).upperTol }" th:text= "${actuals.get(actual).actualMax}" style="color:red;font-weight:700;"></td>
+        
+       
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+</body>
+</html>

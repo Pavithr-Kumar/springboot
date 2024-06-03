@@ -1,0 +1,5 @@
+package com.zettamine.boot.controller;
+
+public class HelloController {
+
+}

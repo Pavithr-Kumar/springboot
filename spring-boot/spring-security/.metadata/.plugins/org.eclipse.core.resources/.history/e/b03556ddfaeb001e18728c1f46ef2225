@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 01.spring-security-basic-auth-1
+#  security:
+#    user:
+#      name: user
+#      password: 1234

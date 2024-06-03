@@ -1,0 +1,19 @@
+package com.zettamine.spring.core;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.zettamine.spring.core.beans.User;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+	   ApplicationContext context = new ClassPathXmlApplicationContext("user-beans.xml");
+	   User user1 = context.getBean(User.class);
+	   System.out.println(user1);
+	   
+	   ((ConfigurableApplicationContext)context).close();
+	}
+
+}

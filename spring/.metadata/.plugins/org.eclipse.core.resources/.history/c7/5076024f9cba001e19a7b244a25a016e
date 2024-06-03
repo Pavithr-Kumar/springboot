@@ -1,0 +1,10 @@
+package com.zettamine.spring.ems.dao;
+
+import com.zettamine.spring.ems.dto.Employee;
+
+public interface EmployeeDao {
+	Integer insertEmployee(Employee emp);
+	Integer updateEmployee(Employee emp);
+	Integer deleteEMployee(Integer id);
+
+}

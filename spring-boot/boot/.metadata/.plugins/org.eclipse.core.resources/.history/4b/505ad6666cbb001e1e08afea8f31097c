@@ -1,0 +1,20 @@
+package com.zettamine.boot.configs;
+
+import java.util.ArrayList;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class EmployeeConfigs {
+	public EmployeeConfigs() {
+		System.err.println("Employee Configuration :: Constructor");
+	}
+	
+	@Bean
+	ArrayList<Integer> getList() {
+		System.out.println("Bean Initialized");
+		return new ArrayList<Integer>();
+	}
+
+}

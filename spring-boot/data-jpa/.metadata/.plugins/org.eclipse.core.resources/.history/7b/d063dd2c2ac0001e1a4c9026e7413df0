@@ -1,0 +1,11 @@
+package com.zettamine.data;
+
+import java.io.Serializable;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.zettamine.data.entities.Product;
+
+public interface ProductRepo extends PagingAndSortingRepository<Product, Serializable> {
+
+}

@@ -1,0 +1,19 @@
+package com.zettamine.boot.configs;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix = "jdbc")
+public class DBConnetion {
+	private String driver;
+	private String url;
+	private String user;
+	private String password;
+	@Override
+	public String toString() {
+		return "DBConnetion [driver=" + driver + ", url=" + url + ", user=" + user + ", password=" + password + "]";
+	}
+
+}

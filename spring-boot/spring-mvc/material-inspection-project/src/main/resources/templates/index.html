@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Inspection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navigation Bar */
+    nav {
+     
+      background: #3498db;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #2ecc71;
+    }
+
+    /* Boxes Section */
+    .boxes-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px;
+    }
+
+     .boxes-container>a {
+      text-decoration:none;
+      font-weight:600;
+      font-size:24px;
+      padding:40px 70px;
+      background: linear-gradient(45deg, #d1dde3, #d4dbe4);
+      text-align: center;
+      border-radius: 10px;
+      margin: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      
+    }
+
+    .boxes-container>a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Add more styling or functionality as needed */
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="/zetta/home">Home</a>
+    <a href="/zetta/vendor">Vendor</a>
+    <a href="/zetta/plant">Plant</a>
+    <a href="/zetta/material">Material</a>
+    <a href="/zetta/material/show-all-characteristics">Material Characteristics</a>
+    
+    <a href="/zetta/isp-lot">Inspection Lot</a>
+  </nav>
+
+  <!-- Boxes Section -->
+  <div class="boxes-container">
+  <a href="/zetta/vendor">Vendor</a>
+    <a href="/zetta/plant">Plant</a>
+    <a href="/zetta/material">Material</a>
+   <a href="#"> Inspection Lot</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.zettamine.spring.core;
+
+import org.springframework.stereotype.Component;
+
+
+public class EmployeeApp {
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.zettamine.data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.zettamine.data.entities.Contact;
+import com.zettamine.data.repository.ContactRepo;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+	ConfigurableApplicationContext context =	SpringApplication.run(Application.class, args);
+	
+	ContactRepo repo = context.getBean(ContactRepo.class);
+	List<Contact> list = new ArrayList<>();
+	list.add(new Contact(102,"Kiran Kumar","73837382798"));
+	list.add(new Contact(103,"Harsha Vardhan","8876557598"));
+	list.add(new Contact(104,"Gopi Krishna","7765363536"));
+	list.add(new Contact(105,"Manoj Kumar","7787657876"));
+	
+Contact con1 =	repo.save(new Contact(101,"Ravi Kumar","9848586878"));
+LoggerFactory.getLogger(Application.class).info("\033[32m {}",con1);
+	context.close();
+	}
+
+}

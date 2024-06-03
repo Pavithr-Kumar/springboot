@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: gatewayserver
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

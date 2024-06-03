@@ -1,0 +1,5 @@
+package com.zettamine.accounts.controller;
+
+public class CustomerDetailsController {
+
+}

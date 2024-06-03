@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./jsp/app-details.css">
+    <script src="https://kit.fontawesome.com/9dc55b3f56.js" ></script>
+    <title>Applicant Details</title>
+    <style>
+    
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+ nav {
+     
+      background: #3498db;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #2ecc71;
+    }
+    
+h1{
+    text-align: center;
+}
+#container{
+    width: 75%;
+    border-radius: 8px;
+    padding: 30px;
+    margin-inline: auto;
+    
+   
+    background: linear-gradient(45deg,rgb(116, 116, 221), rgb(167, 198, 238));
+    box-shadow: 0px 0px 20px gray;
+    margin-top: 34px;
+}
+.form{
+    display: flex;
+}
+
+form input{
+    padding: 8px 16px;
+    background-color: rgb(225, 230, 235);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+select{
+    padding: 8px 16px;
+    background-color: rgb(216, 222, 228);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+select>option{
+    margin-top: 8px;
+    cursor: pointer;    
+
+}
+textarea{
+    padding: 8px 16px;
+    background-color: rgb(219, 225, 230);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+}
+label{
+    margin-top: 10px;
+    font-weight: 600;
+}
+.form>.col{
+    margin-inline:auto;
+    display: flex;
+    gap: 20px;
+   
+}
+
+.form #subcol1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form #subcol2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form>button{
+    display: block;
+    margin-top:30px;
+ margin-inline: auto;
+ background-color: rgb(132, 236, 205);
+ outline: none;
+ border: none;
+ padding: 8px 16px;
+ border-radius: 5px;
+ cursor: pointer;
+transition: all 0.5s;
+ font-size: 16px;
+ font-weight: 600;
+}
+form>button:hover{
+    box-shadow: 0px 0px 10px rgb(14, 13, 13,0.5);
+}
+form>button:active{
+   transform: scale(1.05);
+}
+form .span{
+    display: block;
+    padding: 5px 16px;
+   font-size: 16px;
+   
+    
+}</style>
+</head>
+<body>
+<nav th:include="index :: nav"></nav>
+    <h1 ><i class="fa-solid fa-user-plus"></i>&nbsp; Add Characteristics  </h1>
+    
+    <div id="container">
+        <form action="/zetta/material/get-characteristics-form" method="post" >
+            <div class="form">
+
+           
+            <div class="col">
+                <div id="subcol1">
+                    <label for="name">Select Material <span style="color: red;">*</span></label>
+                    <label for="name">Number of Characteristics<span style="color: red;">*</span></label>
+                    
+                    
+                     
+                </div>
+         <!--        <div th:if="${material.materialId==null}" id="subcol2">
+                    <input type="text" name="materialId" required placeholder="material id" th:feild="*{materialId}">
+                    <input type="text" name="materialDescription" required placeholder="material description" th:feild="*{materialDescription}">
+                    <input type="text" name="materialType" required placeholder="material type" th:feild="*{materialType}">
+                    
+                </div>   --> 
+                
+                <div id="subcol2">
+                
+                <select name="materialId" >
+                <option th:each="material : ${materials}" th:value="${material.materialId}" th:text="${material.materialDescription}"></option>
+                </select>
+                    <input type="number" name="noOfCharacteristics"  required placeholder="number of characteristics" th:feild="*{noOfCharacteristics}">
+                   
+                    
+                  
+                </div>
+            </div>
+            
+            </div>
+        
+            <button  type="submit"> Submit</button>
+            
+        </form>
+    </div>
+</body>
+</html>

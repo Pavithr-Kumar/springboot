@@ -1,0 +1,8 @@
+package com.zettamine.data.entities;
+
+public class Product {
+	private Integer productId;
+	private String productName;
+	private Float productPrice;
+
+}

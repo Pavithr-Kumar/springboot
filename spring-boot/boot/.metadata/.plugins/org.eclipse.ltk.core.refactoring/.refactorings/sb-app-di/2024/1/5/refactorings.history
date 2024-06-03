@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;sb-app-di&apos;&#x0D;&#x0A;- Original project: &apos;sb-app-di&apos;&#x0D;&#x0A;- Original element: &apos;com.zettamine.boot.beans.Engine.java&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.zettamine.boot.beans{Engine.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1706507184422" subPackages="false" version="1.0"/>
+</session>

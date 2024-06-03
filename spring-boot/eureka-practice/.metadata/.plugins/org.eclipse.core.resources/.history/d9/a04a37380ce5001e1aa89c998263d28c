@@ -1,0 +1,5 @@
+package com.zettamine.gateway.controller;
+
+public class ContactSupportFallBack {
+
+}

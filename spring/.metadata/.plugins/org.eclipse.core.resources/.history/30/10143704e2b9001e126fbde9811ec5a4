@@ -1,0 +1,11 @@
+package com.zettamine.spring.dao;
+
+public class DataProvider1 implements DataProvider {
+
+	@Override
+	public int[] getData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

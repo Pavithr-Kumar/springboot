@@ -1,0 +1,10 @@
+package com.zettamine.spring.ems.dto;
+
+public class Employee {
+	private Integer empId;
+	private String empName;
+	private String depName;
+	private String empSal;
+	
+
+}

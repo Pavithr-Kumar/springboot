@@ -1,0 +1,18 @@
+package com.zettamine.spring.core.beans;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Employee {
+	@Value("Ravi Kumar")
+	private String empName;
+	@Value("20000")
+	private float empSal;
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empSal=" + empSal + "]";
+	}
+	
+
+}

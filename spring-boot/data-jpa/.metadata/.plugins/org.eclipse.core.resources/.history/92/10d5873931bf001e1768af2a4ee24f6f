@@ -1,0 +1,16 @@
+package com.zettamine.data;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.zettamine.data.repository.ContactRepo;
+
+@SpringBootApplication
+public class Application {
+
+	private ContactRepo repo;
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+}

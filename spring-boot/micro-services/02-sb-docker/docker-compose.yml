@@ -1,0 +1,16 @@
+services:
+  service1:
+    image: "pavithrkumar/02-sb-docker:v1"
+    ports:
+    - "8080:8080"
+    networks:
+    - zettabank
+  service2:
+    image: "myimage:latest"
+    ports:
+    - "8090:8090"
+    networks:
+    - zettabank
+networks:
+  zettabank:
+    driver: "bridge"

@@ -1,0 +1,5 @@
+package com.zettamine.data.service;
+
+public interface ContactService {
+
+}

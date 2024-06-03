@@ -1,0 +1,22 @@
+package com.zettamine.spring.services;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.zettamine.spring.dao.DataProvider;
+@Service
+public class CalcServices {
+	@Autowired
+	private DataProvider dataProvider;
+	
+	public int findMax() {
+		return Arrays.stream(dataProvider.getData()).max().getAsInt();
+		
+	}
+	
+	
+
+}

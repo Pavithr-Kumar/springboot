@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.dto.LoansDto"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.dto.CustomerDto"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.dto.CardsDto"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.dto.CustomerDetailsDto"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.service.IAccountsService"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder.Builder"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.LoansFallBack"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="com.netflix.discovery.converters.Auto"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.condition.ConditionalOnBean"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.CardsFeignClient"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.LoansFeignCLient"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.retry.annotation.Retry"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.dto.AccountsContactInfoDto"/>
+    <fullyQualifiedTypeName name="org.bouncycastle.crypto.RuntimeCryptoException"/>
+    <fullyQualifiedTypeName name="org.bouncycastle.crypto.CryptoException"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.ratelimiter.annotation.RateLimiter"/>
+    <fullyQualifiedTypeName name="com.zettamine.accounts.CardsFallBack"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+</qualifiedTypeNameHistroy>

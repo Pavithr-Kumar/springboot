@@ -1,0 +1,23 @@
+package com.zettamine.security.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AppController {
+
+	@GetMapping("/home")
+	public String getHomePage() {
+		return "home";
+	}
+	
+	@GetMapping("/home/user")
+	public String getUserPage() {
+		return "user";
+	}
+	
+	@GetMapping("/home/admin")
+	public String getAdminPage() {
+		return "admin";
+	}
+}

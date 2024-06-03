@@ -1,0 +1,22 @@
+package com.zettamine1.sbapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+
+@EnableAutoConfiguration
+@ComponentScan
+
+public class LauncherApp {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+		System.out.println("no of Beans :"+context.getBeanDefinitionCount());
+		context.close();
+		
+
+	}
+
+}

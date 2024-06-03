@@ -1,0 +1,5 @@
+package com.zettamine.spring.ems.dto;
+
+public class Employee {
+
+}

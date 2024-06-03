@@ -1,0 +1,11 @@
+package com.zettamine.boot.configs;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class EmployeeConfigs {
+	public EmployeeConfigs() {
+		System.err.println("Employee Controller :: Constructor");
+	}
+
+}

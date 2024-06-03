@@ -1,0 +1,32 @@
+package com.zettamine.spring.ems.service;
+
+import com.zettamine.spring.ems.dao.EmployeeDao;
+import com.zettamine.spring.ems.dto.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	private EmployeeDao empDao;
+	public EmployeeServiceImpl(EmployeeDao empDao) {
+		
+		this.empDao = empDao;
+	}
+
+	@Override
+	public void saveEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteEmployee(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

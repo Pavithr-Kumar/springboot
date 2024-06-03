@@ -1,0 +1,7 @@
+jdbc.driver =com.mysql.cj.Driver
+jdbc.url=jdbc:mysql://localhost/3306
+jdbc.user=root
+jdbc.password=root
+
+spring.profiles.active=qa
+spring.profiles.active=prod

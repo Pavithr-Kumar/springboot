@@ -1,0 +1,12 @@
+package com.zettamine.data.entities;
+
+import java.io.Serializable;
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ContactRepository extends CrudRepository<Contact, Serializable> {
+
+	
+
+}

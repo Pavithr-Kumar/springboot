@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  application:
+   name: "accounts"
+  config:
+    import: "optional:configserver:http://localhost:8901"
+
+  profiles:
+    active:
+     - "qa"
+  datasource:
+    url: "jdbc:postgresql://localhost:5433/postgres"
+    driverClassName: org.postgresql.Driver
+    username: root
+    password: root
+#  h2:
+#    console:
+#      enabled: true
+#      settings:
+#        web-allow-others: true
+  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/  
+    

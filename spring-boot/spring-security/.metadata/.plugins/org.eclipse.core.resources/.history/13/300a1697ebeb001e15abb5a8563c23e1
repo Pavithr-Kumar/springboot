@@ -1,0 +1,5 @@
+package com.zettamine.security.controller;
+
+public class AppController {
+
+}

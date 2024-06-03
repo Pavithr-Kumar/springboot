@@ -1,0 +1,10 @@
+package com.zettamine.boot.configs;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties
+public class DBConfigs {
+	private String driver;
+	private String url;
+
+}

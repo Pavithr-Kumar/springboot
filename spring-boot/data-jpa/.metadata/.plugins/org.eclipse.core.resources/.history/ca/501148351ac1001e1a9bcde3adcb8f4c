@@ -1,0 +1,24 @@
+package com.zettamine.data.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+public class Student {
+	@Id
+	@GeneratedValue
+	private Integer Id;
+	private String name;
+	
+	@OneToOne
+	@JoinColumn(name = "fk")
+	private Course course;
+
+}

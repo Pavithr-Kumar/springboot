@@ -1,0 +1,8 @@
+package com.zettamine.boot.service;
+
+public class EmployeeService {
+	public EmployeeService() {
+		System.out.println("Employee Service :: Constructor");
+	}
+
+}

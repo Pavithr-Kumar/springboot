@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "accounts"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 1234
+    url: jdbc:h2:mem:accountsdb
+    username: admin
+##  h2:
+#    console:
+#      enabled: true
+  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/    
+
+      

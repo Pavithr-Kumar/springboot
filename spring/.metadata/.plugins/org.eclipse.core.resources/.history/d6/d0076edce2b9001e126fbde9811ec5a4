@@ -1,0 +1,9 @@
+package com.zettamine.spring;
+
+import com.zettamine.spring.dao.DataProvider;
+
+public class CalcServices {
+	private DataProvider dataProvider;
+	
+
+}

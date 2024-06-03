@@ -1,0 +1,5 @@
+package com.zettamine.accounts.dto;
+
+public class CustomerDetailsDto {
+
+}

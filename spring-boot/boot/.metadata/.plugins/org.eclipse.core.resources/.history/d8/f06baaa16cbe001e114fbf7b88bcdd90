@@ -1,0 +1,20 @@
+package com.zettamine.boot.beans;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
+public class PetrolEngine implements Engine {
+	
+	public PetrolEngine() {
+		System.out.println("Petrol Engine :: Bean Created");
+	}
+
+	@Override
+	public void startEngine() {
+		System.out.println("Petrol Engine :: Started");
+
+	}
+
+}

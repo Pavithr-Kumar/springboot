@@ -1,0 +1,6 @@
+package com.zettamine.data.comtroller;
+
+@
+public class WelcomeController {
+
+}

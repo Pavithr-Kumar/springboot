@@ -1,0 +1,10 @@
+package com.zettamine1.sbapp;
+
+public class LauncherApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

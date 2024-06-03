@@ -1,0 +1,21 @@
+package com.zettamine.spring.core;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.zettamine.spring.core.beans.Address;
+import com.zettamine.spring.core.beans.Employee;
+
+@Configuration
+public class BeanConfig {
+	@Bean
+	public Address getAddressObj() {
+		return new Address();
+	}
+	
+	@Bean
+	public Employee getEmployeeObj() {
+		return new Employee();
+	}
+
+}

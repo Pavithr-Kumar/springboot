@@ -1,0 +1,30 @@
+package com.zettamine.data;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.zettamine.data.entities.Contact;
+import com.zettamine.data.entities.ContactRepository;
+
+@SpringBootApplication
+public class Application implements CommandLineRunner {
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	private ContactRepository repo;
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	@Override
+	public void run(String... args) throws Exception {
+		Contact con = repo.findmMyByContactName("Karthik");
+		logger.info("{}",con);
+		
+	}
+	
+
+}

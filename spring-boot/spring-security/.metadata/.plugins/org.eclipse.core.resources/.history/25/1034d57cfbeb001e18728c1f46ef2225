@@ -1,0 +1,5 @@
+package com.zettamine.security.entity;
+
+public class MyUser {
+
+}

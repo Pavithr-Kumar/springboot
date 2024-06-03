@@ -1,0 +1,7 @@
+package com.zettamine.spring.core;
+
+public class EmployeeApp {
+	private String empName;
+	private float empSal;
+
+}

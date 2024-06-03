@@ -1,0 +1,41 @@
+package com.zettamine.data;
+
+import java.util.Arrays;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.zettamine.data.entities.Contact;
+import com.zettamine.data.repository.ContactRepo;
+
+@SpringBootApplication
+public class Application implements CommandLineRunner {
+
+	@Autowired
+	private ContactRepo repo;
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		Contact con = repo.findById(101).get();
+		LoggerFactory.getLogger(Application.class).info("\033[32m {}",con);
+		
+		LoggerFactory.getLogger(Application.class).info("*".repeat(60));
+		Iterable<Contact> contacts = repo.findAll();
+		contacts.forEach(x->LoggerFactory.getLogger(Application.class).info("\033[32m {}",x));
+		
+		LoggerFactory.getLogger(Application.class).info("*".repeat(60));
+		contacts =repo.findAllById(Arrays.asList(101,102,103,200,105));
+		contacts.forEach(x->LoggerFactory.getLogger(Application.class).info("\033[32m {}",x));
+		
+		
+		
+		
+	}
+
+}

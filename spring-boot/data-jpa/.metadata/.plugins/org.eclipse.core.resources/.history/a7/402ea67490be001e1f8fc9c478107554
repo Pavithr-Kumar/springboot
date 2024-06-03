@@ -1,0 +1,8 @@
+package com.zettamine.data.entities;
+
+public class Contact {
+	private Integer contactId;
+	private String contactName;
+	private String contactNumber;
+
+}

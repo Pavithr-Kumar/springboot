@@ -1,0 +1,35 @@
+package com.zettamine.spring.core;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.zettamine.spring.core.beans.Address;
+import com.zettamine.spring.core.beans.Employee;
+
+@Configuration
+@ComponentScan(basePackages = {"com.zettamine.spring"})
+public class AppConfig {
+	@Bean
+	public Address getAddressObj1() {
+		Address add = new Address();
+		
+		return new Address();
+	}
+	
+	@Bean
+	public Address getAddressObj2() {
+		return new Address();
+	}
+	
+	@Bean
+	public Employee getEmployeeObj1() {
+		return new Employee();
+	}
+	
+	@Bean
+	public Employee getEmployeeObj2() {
+		return new Employee();
+	}
+
+}
